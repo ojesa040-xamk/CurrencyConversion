@@ -1,0 +1,43 @@
+In the assignment your task is to build a small currency conversion program. The program should convert US dollars into Euros, Australian dollars, and British pounds. 
+
+To achieve this, the program needs to load currency exchange rate data from a CSV file. An example CSV data file is given below - you can use it to test your program. The data file contains exchange rates between USD and the other three currencies. 
+
+The data file can contain the conversion rates for any number of days. The example file has data for 366 days (a whole year), but the data can also come in shorter or longer periods (for example, one month, or 10 years). 
+
+In addition, conversion rates are only provided for banking days, therefore some dates (weekends and holidays) do not contain any data and your program must skip these lines. 
+
+Your task is to implement a program, the "ACME(tm) US DOLLAR EXCHANGE RATE APP" (tm), whose features are explained in detail in the following sections. Please read the instructions with care!
+
+The program should operate in an infinite loop, where a menu of four options is presented. The menu should look like this: 
+
+ACME(tm) US DOLLAR EXCHANGE RATE APP
+1) LOAD currency exchange rate data from a file
+2) USE AVERAGE exchange rate
+3) USE HIGHEST exchange rate
+4) USE LOWEST exchange rate
+5) CONVERT USD TO EUR
+6) CONVERT USD TO AUD
+7) CONVERT USD TO GBP
+0) QUIT program
+Choose what to do:
+Choosing 0 should end the program (= break out of the loop). Following is an example of the menu's operation. 
+
+At the end of the loop print an additional empty line (= after the number choice and whatever the choice makes the program print, but before the next "ACME(tm) US..." line). 
+
+Implement a function which asks the user for a file name, and then reads the data into a list data structure. Once loaded, the function should print "Currency exchange data is from [number of days] days between [first date] and [last date]." 
+
+For this you must store the dates, and calculate how many days worth of data the file contained. 
+
+The function should return a list containing all data. How you store the data in the list is up to you (that is, you can simply store one line from the file as one item in the list, but you can also do something different..) 
+
+
+The programs menu, apart from loading data and exiting the application, has 6 other features too. 
+
+Options 2, 3 and 4 are for adjusting the exchange rate. Upon loading the data from the csv file you should calculate the average of each currency exchange rates, and use it for the currency conversion. However, by choosing 3 or 4 in the menu, the program should other rates than the average: Highest exchange rate means the highest rate found in the data (and lowest  conversely is the lowest rate in the csv file). 
+Options 5, 6 and 7 perform the actual currency conversions. 
+Examples of these features are shown below. 
+
+In addition to the features described below, there are the following requirements: 
+
+You must implement the features described above as functions. Each menu choice has to be implemented as a function (that is, after the user selects an option, a function is called). 
+You may not use global variables! (Go back to Lesson 6 for what global scope for a variable means.) 
